@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class CartaSemanal {
-	
+	//comentario
 	int id;
 	List<Menu> lunes;
 	List<Menu> martes;
