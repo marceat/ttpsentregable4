@@ -1,3 +1,4 @@
+package clasesNormales;
 
 public class Menu {
 	

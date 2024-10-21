@@ -1,3 +1,4 @@
+package clasesNormales;
 import java.awt.Image;
 import java.io.File;
 

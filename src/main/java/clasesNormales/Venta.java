@@ -1,3 +1,4 @@
+package clasesNormales;
 import java.awt.Image;
 import java.sql.Date;
 import java.util.List;
