@@ -8,6 +8,8 @@ public class Comida {
 	int precio;
 	int stock;
 	
+	public Comida () {}
+	
 	public int getId() {
 		return id;
 	}

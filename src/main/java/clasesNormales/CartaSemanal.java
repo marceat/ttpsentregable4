@@ -10,6 +10,8 @@ public class CartaSemanal {
 	List<Menu> jueves;
 	List<Menu> viernes;
 	
+	public CartaSemanal() {}
+	
 	public int getId() {
 		return id;
 	}

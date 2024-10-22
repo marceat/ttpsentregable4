@@ -11,15 +11,7 @@ public class Menu {
 	private String tipoMenu; //Vegetariano, no vegetariano, sin gluten, sin restricciones.
 	private int precio;
 	
-	public Menu (String nombreMenu, String entrada, String principal, String postre, String bebida, String tipoMenu, int precio) {
-		this.nombreMenu = nombreMenu;
-		this.entrada = entrada;
-		this.platoPrincipal = principal;
-		this.postre = postre;
-		this.bebida = bebida;
-		this.tipoMenu = tipoMenu;
-		this.precio = precio;
-	}
+	public Menu () {}
 
 	public String getEntrada() {
 		return entrada;
