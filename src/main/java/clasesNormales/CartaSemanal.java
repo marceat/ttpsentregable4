@@ -3,11 +3,12 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="CARTA_SEMANAL")
 public class CartaSemanal {
-	//comentario
+
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	
-	@Id
 	List<Menu> lunes;
 	List<Menu> martes;
 	List<Menu> miercoles;
