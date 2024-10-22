@@ -6,17 +6,12 @@ import clasesNormales.Venta;
 
 public interface VentaDAO {
 	
-	public abstract Venta obtenerVentaPorId(int id);
-	
-	public abstract boolean actualizarVenta(Venta unaVenta);
-	
-	public abstract boolean agregarVenta(Venta unaVenta) ;
-	
-	public abstract boolean eliminarVenta(Venta unaVenta);
-	
-	public abstract List<Venta> listarVentas() ;
-	
-	public abstract void enviarQrPorMail(UsuarioGeneral usuario); 
+	Venta obtenerVentaPorId(int id);
+	boolean actualizarVenta(Venta unaVenta);	
+	boolean agregarVenta(Venta unaVenta) ;
+	boolean eliminarVenta(Venta unaVenta);	
+	List<Venta> listarVentas() ;
+	void enviarQrPorMail(UsuarioGeneral usuario); 
 	
 
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 
 public class CartaSemanal {
-	//comentario
+	
 	int id;
 	
 	@Id

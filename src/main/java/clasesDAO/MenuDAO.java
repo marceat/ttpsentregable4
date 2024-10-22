@@ -5,15 +5,11 @@ import clasesNormales.Menu;
 
 public interface MenuDAO {
 	
-	public abstract Menu encontrarMenuPorId(int id);
-	
-	public abstract boolean actualizarMenu(Menu unMenu);
-	
-	public abstract boolean agregarMenu(Menu unMenu);
-	
-	public abstract boolean eliminarMenu(Menu unMenu);
-	
-	public abstract List<Menu> listarMenues();
+	Menu encontrarMenuPorId(int id);
+	boolean actualizarMenu(Menu unMenu);
+	boolean agregarMenu(Menu unMenu);
+	boolean eliminarMenu(Menu unMenu);
+	List<Menu> listarMenues();
 	
 	
 }
