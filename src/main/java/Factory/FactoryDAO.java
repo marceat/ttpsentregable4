@@ -1,6 +1,6 @@
 package Factory;
 
-import clasesDAO.UsuarioDAO;
+import clasesDAO.UsuarioGeneralDAO;
 
 public class FactoryDAO {
 		

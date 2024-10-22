@@ -2,7 +2,7 @@ package clasesNormales;
 import java.util.List;
 import jakarta.persistence.*;
 
-@Entity
+
 public class CartaSemanal {
 	//comentario
 	int id;
