@@ -1,4 +1,4 @@
-package clasesDAOImpJdbc;
+package clasesDAOImpJpa;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import clasesDAO.VentaDAO;
 import clasesNormales.UsuarioGeneral;
 import clasesNormales.Venta;
 
-public class VentaDAOjdbc implements VentaDAO {
+public class VentaDAOjpa implements VentaDAO {
 
 	@Override
 	public Venta obtenerVentaPorId(int id) {

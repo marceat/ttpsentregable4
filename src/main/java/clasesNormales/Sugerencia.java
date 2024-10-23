@@ -1,9 +1,24 @@
 package clasesNormales;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="SUGERENCIA")
 public class Sugerencia {
 	
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
+	
+	@ManyToOne
+	@JoinColumn(name="usuario_dni")
 	UsuarioGeneral usuario;
+	
 	String tipoDeSugerencia;
 	String mensaje;
 	

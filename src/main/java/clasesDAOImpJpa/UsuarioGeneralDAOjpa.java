@@ -1,4 +1,4 @@
-package clasesDAOImpJdbc;
+package clasesDAOImpJpa;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import java.util.List;
 import clasesDAO.UsuarioGeneralDAO;
 import clasesNormales.UsuarioGeneral;
 
-public class UsuarioGeneralDAOjdbc implements UsuarioGeneralDAO{
+public class UsuarioGeneralDAOjpa implements UsuarioGeneralDAO{
 
 	@Override
 	public UsuarioGeneral encontrarPorDni(int dni) {

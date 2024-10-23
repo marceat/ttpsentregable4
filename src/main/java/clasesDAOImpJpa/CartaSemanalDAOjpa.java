@@ -10,7 +10,7 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 
-public class CartaSemanalDAOJpa implements CartaSemanalDAO {
+public class CartaSemanalDAOjpa implements CartaSemanalDAO {
 	
 
 	@Override
@@ -34,7 +34,7 @@ public class CartaSemanalDAOJpa implements CartaSemanalDAO {
 		return false;
 	}
 
-	public void agregarCartaSemanal(CartaSemanal unaCartaSemanal) {
+	public boolean agregarCartaSemanal(CartaSemanal unaCartaSemanal) {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("miUP");
 		EntityManager em = emf.createEntityManager();
@@ -50,6 +50,7 @@ public class CartaSemanalDAOJpa implements CartaSemanalDAO {
         } finally {
             em.close();
         }
+		return false;
 		
 		//return false;
 	}

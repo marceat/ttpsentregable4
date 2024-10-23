@@ -3,11 +3,6 @@ package Factory;
 import clasesDAO.CartaSemanalDAO;
 import clasesDAO.UsuarioGeneralDAO;
 import clasesDAO.VentaDAO;
-import clasesDAOImpJdbc.ComidaDAOjdbc;
-import clasesDAOImpJdbc.MenuDAOjdbc;
-import clasesDAOImpJdbc.SugerenciaDAOjdbc;
-import clasesDAOImpJdbc.UsuarioGeneralDAOjdbc;
-import clasesDAOImpJdbc.VentaDAOjdbc;
 import clasesDAO.CartaSemanalDAO;
 import clasesDAO.UsuarioGeneralDAO;
 import clasesDAO.ComidaDAO;
@@ -15,15 +10,18 @@ import clasesDAO.MenuDAO;
 import clasesDAO.SugerenciaDAO;
 import clasesDAO.ComidaDAO;
 import clasesDAO.MenuDAO;
-import clasesDAOImpJpa.CartaSemanalDAOJpa;
+import clasesDAOImpJpa.CartaSemanalDAOjpa;
 import clasesDAOImpJpa.ComidaDAOjpa;
 import clasesDAOImpJpa.MenuDAOjpa;
+import clasesDAOImpJpa.SugerenciaDAOjpa;
+import clasesDAOImpJpa.UsuarioGeneralDAOjpa;
+import clasesDAOImpJpa.VentaDAOjpa;
 
 
 public class FactoryDAO {
 		
 	public static CartaSemanalDAO getCartaSemanalDAO() {
-		return new CartaSemanalDAOJpa();
+		return new CartaSemanalDAOjpa();
 	}
 	
 	public static ComidaDAO getComidaDAO() {
@@ -36,15 +34,15 @@ public class FactoryDAO {
 
 
     public static SugerenciaDAO getSugerenciaDAO() {
-	   return new SugerenciaDAOjdbc();
+	   return new SugerenciaDAOjpa();
     }
 
     public static UsuarioGeneralDAO getUsuarioGeneralDAO() {
-       return new UsuarioGeneralDAOjdbc();
+       return new UsuarioGeneralDAOjpa();
     }
     
     public static VentaDAO getVentaDAO() {
-        return new VentaDAOjdbc();
+        return new VentaDAOjpa();
     }
 
 

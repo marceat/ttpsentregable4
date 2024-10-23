@@ -2,7 +2,15 @@ package clasesNormales;
 import java.awt.Image;
 import java.io.File;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="USUARIO_GENERAL")
 public abstract class UsuarioGeneral {
+	
+	@Id
 	private int dni;
 	private String nombre;
 	private String apellido;
@@ -10,9 +18,9 @@ public abstract class UsuarioGeneral {
 	private String contraseña;
 	private String preferenciasAlientarias;
 	private String rol;
-	private Image fotoPerfil;
+	private String fotoPerfil;
 	
-	public UsuarioGeneral(int unDni, String unNombre, String unApellido, String unEmail, String unaContraseña, String prefe, Image foto) {
+	public UsuarioGeneral(int unDni, String unNombre, String unApellido, String unEmail, String unaContraseña, String prefe, String foto) {
 		this.dni = unDni;
 		this.nombre = unNombre;
 		this.apellido = unApellido;
@@ -60,10 +68,10 @@ public abstract class UsuarioGeneral {
 	public void setContraseña(String contraseña) {
 		this.contraseña = contraseña;
 	}
-	public Image getFotoPerfil() {
+	public String getFotoPerfil() {
 		return fotoPerfil;
 	}
-	public void setFotoPerfil(Image fotoPerfil) {
+	public void setFotoPerfil(String fotoPerfil) {
 		this.fotoPerfil = fotoPerfil;
 	}
 

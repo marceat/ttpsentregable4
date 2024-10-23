@@ -3,14 +3,33 @@ import java.awt.Image;
 import java.sql.Date;
 import java.util.List;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="VENTA")
 public class Venta {
+	
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
+	
+	@ManyToOne
 	UsuarioGeneral usuario;
+	
+	@OneToMany
 	List<Menu> menues;
+	
+	@OneToMany
 	List<Comida> comidas;
+	
 	Date fecha;
 	int precioTotal;
-	Image qr;
+	String qr;
 	
 	public List<Comida> getComidas() {
 		return comidas;
@@ -50,10 +69,10 @@ public class Venta {
 	public void setPrecioTotal(int precioTotal) {
 		this.precioTotal = precioTotal;
 	}
-	public Image getQr() {
+	public String getQr() {
 		return qr;
 	}
-	public void setQr(Image qr) {
+	public void setQr(String qr) {
 		this.qr = qr;
 	}
 	

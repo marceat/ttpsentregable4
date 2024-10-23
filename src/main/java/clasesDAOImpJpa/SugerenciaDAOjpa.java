@@ -1,10 +1,10 @@
-package clasesDAOImpJdbc;
+package clasesDAOImpJpa;
 
 import java.util.List;
 import clasesDAO.SugerenciaDAO;
 import clasesNormales.Sugerencia;
 
-public class SugerenciaDAOjdbc implements SugerenciaDAO {
+public class SugerenciaDAOjpa implements SugerenciaDAO {
 	
 	public Sugerencia obtenerSugerenciaPorId(int id) {
 		return null;
