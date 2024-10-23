@@ -1,8 +1,11 @@
 package clasesNormales;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name="COMIDA")
 public class Comida {
 	
-	//probando
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	String nombre;
 	int precio;

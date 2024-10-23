@@ -3,7 +3,6 @@ package Factory;
 import clasesDAO.CartaSemanalDAO;
 import clasesDAO.UsuarioGeneralDAO;
 import clasesDAO.VentaDAO;
-import clasesDAOImpJdbc.CartaSemanalDAOjdbc;
 import clasesDAOImpJdbc.ComidaDAOjdbc;
 import clasesDAOImpJdbc.MenuDAOjdbc;
 import clasesDAOImpJdbc.SugerenciaDAOjdbc;
@@ -14,22 +13,27 @@ import clasesDAO.UsuarioGeneralDAO;
 import clasesDAO.ComidaDAO;
 import clasesDAO.MenuDAO;
 import clasesDAO.SugerenciaDAO;
-import clasesDAOImpJdbc.CartaSemanalDAOjdbc;
+import clasesDAO.ComidaDAO;
+import clasesDAO.MenuDAO;
+import clasesDAOImpJpa.CartaSemanalDAOJpa;
+import clasesDAOImpJpa.ComidaDAOjpa;
+import clasesDAOImpJpa.MenuDAOjpa;
+
 
 public class FactoryDAO {
 		
 	public static CartaSemanalDAO getCartaSemanalDAO() {
-		return new CartaSemanalDAOjdbc();
+		return new CartaSemanalDAOJpa();
+	}
+	
+	public static ComidaDAO getComidaDAO() {
+		return new ComidaDAOjpa();
+	}
+	
+	public static MenuDAO getMenuDAO() {
+		return new MenuDAOjpa();
 	}
 
-
-    public static ComidaDAO getComidaDAO() {
-       return new ComidaDAOjdbc();
-    }
-
-    public static MenuDAO getMenuDAO() {
-	   return new MenuDAOjdbc();
-    }
 
     public static SugerenciaDAO getSugerenciaDAO() {
 	   return new SugerenciaDAOjdbc();

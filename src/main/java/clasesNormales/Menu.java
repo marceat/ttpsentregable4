@@ -1,7 +1,11 @@
 package clasesNormales;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name="MENU")
 public class Menu {
 	
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private String id;
 	private String nombreMenu;
 	private String entrada;

@@ -3,18 +3,37 @@ import java.util.List;
 import jakarta.persistence.*;
 
 
+@Entity
+@Table(name="CARTA_SEMANAL")
 public class CartaSemanal {
-	
+
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	
-	@Id
-	List<Menu> lunes;
-	List<Menu> martes;
-	List<Menu> miercoles;
-	List<Menu> jueves;
-	List<Menu> viernes;
+	@OneToMany
+	private List<Menu> lunes;
+	
+	@OneToMany
+	private List<Menu> martes;
+	
+	@OneToMany
+	private List<Menu> miercoles;
+	
+	@OneToMany
+	private List<Menu> jueves;
+	
+	@OneToMany
+	private List<Menu> viernes;
 	
 	public CartaSemanal() {}
+	
+	public CartaSemanal(List<Menu> lun, List<Menu> mar, List<Menu> mie, List<Menu> jue, List<Menu> vie) {
+		this.setLunes(lun);
+		this.setMartes(mar);
+		this.setMiercoles(mie);
+		this.setJueves(jue);
+		this.setViernes(vie);
+	}
 	
 	public int getId() {
 		return id;
