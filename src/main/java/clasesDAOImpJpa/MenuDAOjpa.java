@@ -1,11 +1,11 @@
-package clasesDAOImpJdbc;
+package clasesDAOImpJpa;
 
 import java.util.List;
 
 import clasesDAO.MenuDAO;
 import clasesNormales.Menu;
 
-public class MenuDAOjdbc implements MenuDAO {
+public class MenuDAOjpa implements MenuDAO {
 
 	@Override
 	public Menu encontrarMenuPorId(int id) {

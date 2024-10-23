@@ -1,11 +1,11 @@
-package clasesDAOImpJdbc;
+package clasesDAOImpJpa;
 
 import java.util.List;
 
 import clasesDAO.ComidaDAO;
 import clasesNormales.Comida;
 
-public class ComidaDAOjdbc implements ComidaDAO {
+public class ComidaDAOjpa implements ComidaDAO {
 
 	@Override
 	public Comida obtenerComidaPorId(int id) {
