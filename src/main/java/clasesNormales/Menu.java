@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Menu {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	private String id;
+	private int id;
 	private String nombreMenu;
 	private String entrada;
 	private String platoPrincipal;
@@ -16,6 +16,16 @@ public class Menu {
 	private int precio;
 	
 	public Menu () {}
+	
+	public Menu (String n, String e, String plato, String postre, String b, String t, int precio) {
+		this.setNombreMenu(n);
+		this.setEntrada(e);
+		this.setPlatoPrincipal(plato);
+		this.setPostre(postre);
+		this.setBebida(b);
+		this.setTipoMenu(t);
+		this.setPrecio(precio);
+	}
 
 	public String getEntrada() {
 		return entrada;
@@ -57,11 +67,11 @@ public class Menu {
 		this.precio = precio;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

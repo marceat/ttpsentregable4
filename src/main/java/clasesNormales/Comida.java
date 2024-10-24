@@ -2,7 +2,7 @@ package clasesNormales;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="COMIDA")
+@Table(name="comida")
 public class Comida {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
@@ -12,6 +12,12 @@ public class Comida {
 	int stock;
 	
 	public Comida () {}
+	
+	public Comida(String n, int p, int s) {
+		this.setNombre(n);
+		this.setPrecio(p);
+		this.setStock(s);
+	}
 	
 	public int getId() {
 		return id;
