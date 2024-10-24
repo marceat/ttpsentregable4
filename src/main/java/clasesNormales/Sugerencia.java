@@ -18,9 +18,18 @@ public class Sugerencia {
 	@ManyToOne
 	@JoinColumn(name="usuario_dni")
 	UsuarioGeneral usuario;
-	
 	String tipoDeSugerencia;
 	String mensaje;
+    
+	
+	public Sugerencia(String unMensaje,String unTipo,UsuarioGeneral usuario) {
+		this.mensaje=unMensaje;
+		this.tipoDeSugerencia=unTipo;
+		this.usuario=usuario;
+		
+		
+	}
+	public Sugerencia() {}
 	
 	public int getId() {
 		return id;
