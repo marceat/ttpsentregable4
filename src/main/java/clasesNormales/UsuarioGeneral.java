@@ -1,5 +1,4 @@
 package clasesNormales;
-import java.awt.Image;
 import java.io.File;
 
 import jakarta.persistence.Entity;
@@ -7,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="USUARIO_GENERAL")
+@Table(name="usuario_general")
 public abstract class UsuarioGeneral {
 	
 	@Id
@@ -20,6 +19,9 @@ public abstract class UsuarioGeneral {
 	private String rol;
 	private String fotoPerfil;
 	
+	public UsuarioGeneral() {
+		
+	}
 	public UsuarioGeneral(int unDni, String unNombre, String unApellido, String unEmail, String unaContraseña, String prefe, String foto) {
 		this.dni = unDni;
 		this.nombre = unNombre;

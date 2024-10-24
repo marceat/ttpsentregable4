@@ -15,6 +15,7 @@ import jakarta.persistence.Table;
 @Table(name="VENTA")
 public class Venta {
 	
+	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	
@@ -28,9 +29,18 @@ public class Venta {
 	List<Comida> comidas;
 	
 	Date fecha;
-	int precioTotal;
+	Double precioTotal;
 	String qr;
 	
+    public 	Venta() {
+		
+	}
+    
+    public Venta(Date unaFecha, Double precio, String qr) {
+    	this.fecha=unaFecha;
+    	this.precioTotal=precio;
+    	this.qr=qr;
+    }
 	public List<Comida> getComidas() {
 		return comidas;
 	}
@@ -63,10 +73,10 @@ public class Venta {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public int getPrecioTotal() {
+	public Double getPrecioTotal() {
 		return precioTotal;
 	}
-	public void setPrecioTotal(int precioTotal) {
+	public void setPrecioTotal(Double precioTotal) {
 		this.precioTotal = precioTotal;
 	}
 	public String getQr() {
