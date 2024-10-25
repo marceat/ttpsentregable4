@@ -3,6 +3,7 @@ import java.awt.Image;
 import java.sql.Date;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,13 +20,13 @@ public class Venta {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	
-	@ManyToOne
+	@ManyToOne(cascade={CascadeType.MERGE})
 	UsuarioGeneral usuario;
 	
-	@OneToMany
+	@OneToMany(cascade={CascadeType.MERGE})
 	List<Menu> menues;
 	
-	@OneToMany
+	@OneToMany(cascade={CascadeType.MERGE})
 	List<Comida> comidas;
 	
 	Date fecha;
@@ -44,6 +45,7 @@ public class Venta {
     	this.menues=m;
     	this.comidas=c;
     }
+    
 	public List<Comida> getComidas() {
 		return comidas;
 	}
