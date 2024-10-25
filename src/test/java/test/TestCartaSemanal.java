@@ -92,12 +92,34 @@ class TestCartaSemanal {
 		cartaSemanal = new CartaSemanal (menuLunes1.getId(),menuLunes2.getId(),menuMartes1.getId(),
 				menuMartes2.getId(),menuMiercoles1.getId(),menuMiercoles2.getId(),menuJueves1.getId(),menuJueves2.getId(),
 				menuViernes1.getId(),menuViernes2.getId());
+		
+		
 				
 	}
 
 	@Test
 	void agregarUnaCartaSemanal() {
-		Assertions.assertEquals(true, funcionesCartaSemanal.agregarCartaSemanal(cartaSemanal));		
+		Assertions.assertEquals(true, funcionesCartaSemanal.agregarCartaSemanal(cartaSemanal));	
+		System.out.println("Se ha agregado la carta con id: "+cartaSemanal.getId());
+	}
+	
+	@Test
+	void recuperarUnaCartaSemanal() {
+		funcionesCartaSemanal.agregarCartaSemanal(cartaSemanal);
+		Assertions.assertEquals(cartaSemanal.getId(), funcionesCartaSemanal.obtenerCartaSemanalPorId(cartaSemanal.getId()).getId());
+	}
+	
+	@Test
+	void actualizarUnaCartaSemanal() {
+		funcionesCartaSemanal.agregarCartaSemanal(cartaSemanal);
+		cartaSemanal.setId_menu_jueves_1(cartaSemanal.getId_menu_viernes_2());
+		Assertions.assertEquals(true, funcionesCartaSemanal.actualizarCartaSemanal(cartaSemanal));
+	}
+	
+	@Test
+	void eliminarUnaCartaSemanal() {
+		funcionesCartaSemanal.agregarCartaSemanal(cartaSemanal);
+		Assertions.assertEquals(true, funcionesCartaSemanal.eliminarCartaSemanal(cartaSemanal));
 	}
 
 }
