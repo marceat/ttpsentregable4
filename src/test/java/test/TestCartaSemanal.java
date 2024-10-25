@@ -92,9 +92,7 @@ class TestCartaSemanal {
 		cartaSemanal = new CartaSemanal (menuLunes1.getId(),menuLunes2.getId(),menuMartes1.getId(),
 				menuMartes2.getId(),menuMiercoles1.getId(),menuMiercoles2.getId(),menuJueves1.getId(),menuJueves2.getId(),
 				menuViernes1.getId(),menuViernes2.getId());
-		
-		
-				
+
 	}
 
 	@Test
