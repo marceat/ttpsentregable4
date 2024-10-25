@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import clasesNormales.Venta;
+
 class TestVenta {
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+	Venta venta1;
+	Venta venta2;
 
 }
