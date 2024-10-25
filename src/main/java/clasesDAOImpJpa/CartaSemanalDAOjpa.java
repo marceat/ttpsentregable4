@@ -1,5 +1,6 @@
 package clasesDAOImpJpa;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import clasesDAO.CartaSemanalDAO;
