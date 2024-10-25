@@ -66,7 +66,7 @@ public class MenuDAOjpa implements MenuDAO {
 		
 		try {
 			etx.begin();
-			
+			em.persist(unMenu);
 			em.merge(unMenu);
 			etx.commit();
 			actualizado=true;

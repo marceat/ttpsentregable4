@@ -73,7 +73,7 @@ public class CartaSemanalDAOjpa implements CartaSemanalDAO {
 		
 		try {
 			etx.begin();
-			//em.persist(unaCartaSemanal);
+			em.persist(unaCartaSemanal);
 			em.merge(unaCartaSemanal);
 			etx.commit();
 			actualizado=true;

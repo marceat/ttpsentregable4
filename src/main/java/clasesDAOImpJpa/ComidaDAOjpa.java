@@ -69,7 +69,9 @@ public class ComidaDAOjpa implements ComidaDAO {
 		
 		try {
 			etx.begin();
+			em.persist(unaComida); 	// ====== AVISARLE A TOMI QUE VA EL PERSIST ANTES DE AGREGAR!!!!!!!
 			em.merge(unaComida);
+			
 			etx.commit();
 			actualizado=true;
 			
