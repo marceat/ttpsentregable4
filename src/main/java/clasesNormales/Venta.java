@@ -36,10 +36,13 @@ public class Venta {
 		
 	}
     
-    public Venta(Date unaFecha, Double precio, String qr) {
+    public Venta(Date unaFecha, Double precio, String qr,UsuarioGeneral us, List<Menu>m,List<Comida>c) {
     	this.fecha=unaFecha;
     	this.precioTotal=precio;
     	this.qr=qr;
+    	this.usuario=us;
+    	this.menues=m;
+    	this.comidas=c;
     }
 	public List<Comida> getComidas() {
 		return comidas;

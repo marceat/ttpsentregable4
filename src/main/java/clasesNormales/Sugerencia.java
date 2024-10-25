@@ -1,5 +1,6 @@
 package clasesNormales;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,9 +16,10 @@ public class Sugerencia {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	
-	@ManyToOne
+	@ManyToOne(cascade={CascadeType.MERGE})
 	@JoinColumn(name="usuario_dni")
 	UsuarioGeneral usuario;
+	
 	String tipoDeSugerencia;
 	String mensaje;
     

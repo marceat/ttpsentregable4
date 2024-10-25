@@ -35,18 +35,20 @@ public class SugerenciaDAOjpa implements SugerenciaDAO {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("miUP");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction etx = em.getTransaction();
-		
+		boolean agregado=false;
 		try {
 			etx.begin();
 			em.persist(unaSugerencia);
+			em.merge(unaSugerencia);
 			etx.commit();
+			agregado=true;
 			
 		} catch (Exception e) {
             e.printStackTrace();
         } finally {
             em.close();
         }
-		return false;
+		return agregado;
 	}
 	
 	public boolean actualizarSugerencia(Sugerencia unaSugerencia) {

@@ -77,7 +77,7 @@ public class UsuarioGeneralDAOjpa implements UsuarioGeneralDAO{
 	    boolean creado=false;
 	    try {
 	        etx.begin();
-	        
+	        em.persist(unUsuario);
 	        em.merge(unUsuario);
 	        etx.commit();
 	        creado = true;

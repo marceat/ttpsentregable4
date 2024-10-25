@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="usuario_general")
-public abstract class UsuarioGeneral {
+public class UsuarioGeneral {
 	
 	@Id
 	private int dni;
